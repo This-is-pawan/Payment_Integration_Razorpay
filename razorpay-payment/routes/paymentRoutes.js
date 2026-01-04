@@ -51,7 +51,9 @@ router.post("/verify-payment", (req, res) => {
 
 // Payment success page
 router.get("/payment-success", (req, res) => {
-  res.sendFile(path.join(__dirname, "../views/success.html"));
+  const paymentId = req.query.paymentId;
+  res.render("success", { paymentId }); // ✅ Render EJS
 });
+
 
 module.exports = router;
