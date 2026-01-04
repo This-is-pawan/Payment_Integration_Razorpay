@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Success</title>
+</head>
+<body>
+  <h1>Payment Successful ✅</h1>
+  <p>Your payment ID: <span id="paymentId"></span></p>
+<p class="back" style="cursor:pointer; color:rgb(49, 49, 207); text-decoration:underline;">Go back</p>
+  <script>
+    const back=document.querySelector('.back')
+    // Get paymentId from URL query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const paymentId = urlParams.get("paymentId");
+    document.getElementById("paymentId").textContent = paymentId;
+    back.addEventListener('click', () => {
+    window.location.href = '/';
+  });
+  </script>
+</body>
+</html>
