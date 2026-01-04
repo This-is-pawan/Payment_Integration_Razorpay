@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Razorpay Payment</title>
-</head>
-<body>
-  <h2>Pay with Razorpay</h2>
+ 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pay with Razorpay</title>
 
-  <input type="number" id="amount" placeholder="Enter amount" />
-  <button id="payBtn">Pay</button>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-100 to-purple-200 min-h-screen flex items-center justify-center">
+
+  <div class="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Pay with Razorpay 💳</h2>
+
+    <input 
+      type="number" 
+      id="amount" 
+      placeholder="Enter amount" 
+      class="w-full px-4 py-3 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition"
+    />
+
+    <button 
+      id="payBtn" 
+      class="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 rounded-lg hover:scale-105 transform transition-all shadow-lg"
+    >
+      Pay
+    </button>
+
+    <p class="text-gray-500 text-sm mt-4">Demo Payment Integration</p>
+  </div>
 
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
